@@ -10,7 +10,17 @@ const AddIsland:FC<IProps> = ({addIsland}) => {
   return (
     <form className={styles.AddIsland} onSubmit={(e:SyntheticEvent)=>{
       e.preventDefault()
-      console.log('hello')}
+      const target = e.target as any
+      const newIsland:IIsland={
+        name: target.name.value,
+        population: target.population.value,
+        imgUrl: target.url.value,
+        description: target.description.value
+      }
+
+      addIsland(newIsland);
+      (target as HTMLFormElement).reset()
+    }
     }>
       <input type="text" name='name' placeholder='Name' required />
       <input type="text" name='url' placeholder='Img url' required/>

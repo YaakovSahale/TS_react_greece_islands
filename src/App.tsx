@@ -28,6 +28,7 @@ const [islands,setIslands] = useState<IIsland[]>([
 
   return (
     <div className="App">
+      <h2>Greek islands</h2>
       <AddIsland addIsland={addIsland}/>
       <Islands Islands={islands}/>
     </div>
