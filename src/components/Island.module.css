@@ -1,13 +1,28 @@
-
-
 .Island {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: 32rem;
 }
 
-.Island img{
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    margin: 0.5rem;
+.Island img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+
+.Island p{
+    flex: 1;
+}
+
+.Island p:last-child{
+    flex: 2;
+}
+
+.Island p:nth-child(2){
+    font-size: 1.2rem ;
+    font-weight: bold;
 }
